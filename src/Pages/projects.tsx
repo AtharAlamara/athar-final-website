@@ -239,7 +239,7 @@ function ProjectsPage() {
   <div className="block md:hidden absolute inset-0 overflow-hidden">
     <iframe
       src="https://customer-3a18rxl1od32bsw3.cloudflarestream.com/318b58e6fe9bf9c84694bd4614ae1abb/iframe?autoplay=1&muted=1&loop=1"
-      className="absolute top-1/2 left-1/2 w-[320vw] h-[320vh] -translate-x-1/2 -translate-y-1/2 object-cover"
+      className="absolute top-1/2 left-1/2 w-[350vw] h-[350vh] -translate-x-1/2 -translate-y-1/2 object-cover"
       frameBorder="0"
       allow="autoplay; fullscreen; picture-in-picture"
       allowFullScreen
