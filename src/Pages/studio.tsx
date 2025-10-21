@@ -80,7 +80,7 @@ function StudioPage() {
 
 
   {/* Desktop Video */}
-  <div className="hidden md:block absolute inset-0">
+  <div className="hidden md:block absolute inset-0 h-[102vh] overflow-hidden">
     <iframe
       src="https://customer-3a18rxl1od32bsw3.cloudflarestream.com/cd63fb13cbf5d231f9c2a3eac5980947/iframe?autoplay=1&muted=1&loop=1"
       className="absolute top-1/2 left-1/2 w-[150vw] h-[190vh] -translate-x-1/2 -translate-y-1/2 object-cover"
