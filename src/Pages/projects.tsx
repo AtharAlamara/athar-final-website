@@ -238,7 +238,7 @@ function ProjectsPage() {
   {/* Mobile Video */}
   <div className="block md:hidden absolute inset-0 overflow-hidden">
     <iframe
-      src="https://customer-2s48kq65j4o8hpc0.cloudflarestream.com/1aa87f840ea418c18df2fccd98135bb4/iframe?autoplay=1&muted=1&loop=1"
+      src="https://customer-3a18rxl1od32bsw3.cloudflarestream.com/318b58e6fe9bf9c84694bd4614ae1abb/iframe?autoplay=1&muted=1&loop=1"
       className="absolute top-1/2 left-1/2 w-[320vw] h-[320vh] -translate-x-1/2 -translate-y-1/2 object-cover"
       frameBorder="0"
       allow="autoplay; fullscreen; picture-in-picture"
