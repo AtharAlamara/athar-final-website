@@ -59,7 +59,7 @@ function CareerOpportunities() {
     const formData = new FormData(e.currentTarget);
 
     try {
-      await fetch('https://n8n.bespokegrowth.gr/webhook-test/6b860765-1217-41a1-9191-bc7f5b057237', {
+      await fetch('https://hook.eu2.make.com/1q5j6mbvfr9zy7mwe8zkmo6obe8geg53', {
         method: 'POST',
         body: formData,
       });
