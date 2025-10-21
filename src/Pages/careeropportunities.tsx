@@ -59,9 +59,27 @@ function CareerOpportunities() {
     const formData = new FormData(e.currentTarget);
     const formObject: Record<string, any> = {};
 
-    formData.forEach((value, key) => {
-      formObject[key] = value;
-    });
+    for (const [key, value] of formData.entries()) {
+      if (value instanceof File) {
+        const base64 = await new Promise<string>((resolve) => {
+          const reader = new FileReader();
+          reader.onloadend = () => {
+            const result = reader.result as string;
+            resolve(result);
+          };
+          reader.readAsDataURL(value);
+        });
+
+        formObject[key] = {
+          filename: value.name,
+          contentType: value.type,
+          size: value.size,
+          data: base64
+        };
+      } else {
+        formObject[key] = value;
+      }
+    }
 
     try {
       await fetch('https://hook.eu2.make.com/1q5j6mbvfr9zy7mwe8zkmo6obe8geg53', {
