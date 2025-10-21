@@ -50,6 +50,36 @@ function CareerOpportunities() {
 
   // State for "Other" position
   const [selectedPosition, setSelectedPosition] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    const formObject: Record<string, any> = {};
+
+    formData.forEach((value, key) => {
+      formObject[key] = value;
+    });
+
+    try {
+      await fetch('https://hook.eu2.make.com/1q5j6mbvfr9zy7mwe8zkmo6obe8geg53', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formObject),
+      });
+
+      window.location.href = locale === 'ar' ? '/sa/thank-you' : '/thank-you';
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('There was an error submitting your application. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   // Animation observer
   useEffect(() => {
@@ -180,14 +210,9 @@ function CareerOpportunities() {
                   </h2>
 
                   <form
-                    action="https://formsubmit.co/hr@atharalamara.sa"
-                    method="POST"
-                    encType="multipart/form-data"
+                    onSubmit={handleSubmit}
                     className="space-y-6"
                   >
-                    <input type="hidden" name="_captcha" value="false" />
-                    <input type="hidden" name="_subject" value="New Career Application - Athar Architecture" />
-                    <input type="hidden" name="_next" value="https://atharalamara.sa/thank-you" />
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
@@ -279,10 +304,11 @@ function CareerOpportunities() {
 
                     <button
                       type="submit"
-                      className="w-full py-3 px-4 bg-[#000000] text-white rounded-lg hover:bg-[#292827] transition-colors duration-300"
+                      disabled={isSubmitting}
+                      className="w-full py-3 px-4 bg-[#000000] text-white rounded-lg hover:bg-[#292827] transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                       style={{ fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", fontWeight: 200 }}
                     >
-                      {t('submit-label', 'Submit CV')}
+                      {isSubmitting ? t('submitting-label', 'Submitting...') : t('submit-label', 'Submit CV')}
                     </button>
                   </form>
                 </div>
