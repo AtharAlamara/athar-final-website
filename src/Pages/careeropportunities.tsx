@@ -96,7 +96,7 @@ function CareerOpportunities() {
         {/* Desktop video */}
         <div className="hidden md:block absolute inset-0">
           <iframe
-            src="https://customer-2s48kq65j4o8hpc0.cloudflarestream.com/dde6289db8c0b61ac675763bc54575d8/iframe?autoplay=1&muted=1&loop=1"
+            src="https://customer-3a18rxl1od32bsw3.cloudflarestream.com/e7bd70335dedf8aada8f7a660b856b36/iframe?autoplay=1&muted=1&loop=1"
             className="absolute top-1/2 left-1/2 w-[150vw] h-[150vh] -translate-x-1/2 -translate-y-1/2 object-cover"
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture"
@@ -119,7 +119,7 @@ function CareerOpportunities() {
         {/* Mobile video */}
         <div className="block md:hidden absolute inset-0">
           <iframe
-            src="https://customer-2s48kq65j4o8hpc0.cloudflarestream.com/dde6289db8c0b61ac675763bc54575d8/iframe?autoplay=1&muted=1&loop=1"
+            src="https://customer-3a18rxl1od32bsw3.cloudflarestream.com/e7bd70335dedf8aada8f7a660b856b36/iframe?autoplay=1&muted=1&loop=1"
             className="absolute top-1/2 left-1/2 w-[350vw] h-[350vh] -translate-x-1/2 -translate-y-1/2 object-cover"
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture"
